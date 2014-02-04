@@ -134,7 +134,7 @@ class CakeformHelper extends AppHelper {
                         }
 
                         if(!empty($field['label'])){
-                                $options['label'] = $field['label'];
+                                $options['label'] = $field['label']  . (isset($field['required']) && $field['required'] ? '<span class="required">*</span>' : '');
 
 				if($field['type'] == 'radio'){
 				    $options['legend'] = $field['label'];
